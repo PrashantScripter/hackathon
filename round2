@@ -1,0 +1,53 @@
+//problem 1:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> writefibonacci(int num){
+    int a = 0;
+    int b = 1;
+    vector<int>ans;
+    ans.push_back(a);
+    ans.push_back(b);
+    for(int i = 0; i < num-1; i++){
+        int sol1 = ans[i] + ans[i+1];
+        ans.push_back(sol1);
+    }
+    return ans;
+}
+
+int main(){
+    int a;
+    cout<<"Enter the number of term"<<endl;
+    cin>>a;
+    vector<int>sol = writefibonacci(a);
+
+    for(int i = 0; i < sol.size()-1; i++){
+        cout<<sol[i];
+    }
+    
+}
+
+
+// 
+// problem 2:
+// 
+#include<bits/stdc++.h>
+using namespace std;
+
+float findSum(int num1, float num2){
+
+    float sol = float(num1) + num2;
+    return sol;
+}
+
+
+int main(){
+    int num1 = 5;
+    float num2 = 2.0;
+
+    float ans = findSum(num1,num2);
+    cout<<ans;
+
+    return 0;
+}
